@@ -66,6 +66,9 @@
         applyTheme(newTheme);
         updateToggleIcon(newTheme);
     }
+
+    // make toggleTheme function globally accessible
+    window.toggleTheme = toggleTheme;
     
     /**
      * Initialize dark mode functionality

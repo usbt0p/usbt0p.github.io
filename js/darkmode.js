@@ -105,3 +105,16 @@
         init();
     }
 })();
+
+// Add event listeners for hover and click effects on the dark mode toggle button
+// The CSS handles the scaling effects
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+if (darkModeToggle) {
+    // Handle hover effect
+    darkModeToggle.addEventListener('mouseover', () => {});
+    darkModeToggle.addEventListener('mouseout', () => {});
+    // Handle click effect
+    darkModeToggle.addEventListener('mousedown', () => {});
+    darkModeToggle.addEventListener('mouseup', () => {});
+}

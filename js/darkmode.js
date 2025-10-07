@@ -50,7 +50,7 @@
         if (toggleButton) {
             const icon = toggleButton.querySelector('.icon');
             if (icon) {
-                icon.textContent = theme === THEME_DARK ? LIGHT_ICON : DARK_ICON;
+                icon.textContent = theme === THEME_DARK ? DARK_ICON : LIGHT_ICON;
             }
         }
     }
@@ -59,8 +59,9 @@
      * Toggle between light and dark themes
      */
     function toggleTheme() {
-        const currentTheme = getCurrentTheme();
-        const newTheme = currentTheme === THEME_DARK ? THEME_LIGHT : THEME_DARK;
+        // read from document attribute instead of localStorage to get the actual current theme
+        const currentlyDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const newTheme = currentlyDark ? THEME_LIGHT : THEME_DARK;
         
         localStorage.setItem(THEME_KEY, newTheme);
         applyTheme(newTheme);

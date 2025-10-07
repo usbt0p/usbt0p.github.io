@@ -7,6 +7,15 @@ fetch('nav.html')
         const toggleButton = document.getElementById('dark-mode-toggle');
         if (toggleButton) {
             toggleButton.addEventListener('click', toggleTheme);
+
+            // Set initial theme and icon. 
+            // Need to do this here since the nav has to load before the dakmode logic can find the button.
+            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            const iconElement = document.querySelector('.icon');
+            if (iconElement) {
+                iconElement.textContent = theme === 'dark' ? '🌙' : '☀️';
+            } 
         }
     })
     .catch(error => {

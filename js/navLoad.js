@@ -12,3 +12,13 @@ fetch('nav.html')
     .catch(error => {
         console.error('Error loading navigation:', error);
     });
+
+// Load footer dynamically
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('footer').innerHTML = data;
+    })
+    .catch(error => {
+        console.error('Error loading footer:', error);
+    });

@@ -73,11 +73,17 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0rem 4rem; /* In theory this aligns it with the main */
 }
 
 nav h1 {
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+nav h1 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
 }
 
 nav ul {

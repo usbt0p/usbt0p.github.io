@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>My Personal Website</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li> -->
+                <li><a href="gallery.html">Gallery</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                <span class="icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <p>A series of 2D strange attractors I recently created while playing around with 
+                some code.
+            </p>
+            <p>
+                Colors are interpolated with exponential and cosine functions from an star to an end color
+                (top three images) or a histogram of the density of points (bottom three images, using numpy's magma colormap).
+            </p>
+            <img src="images/292_exp_2000x2000_15000000_248-214-74_7-41-181.png" alt="Strange attractor" width="300">
+            <img src="images/814_exp_2000x2000_15000000_0-0-255_0-255-0.png" alt="Strange attractor" width="300">
+            <img src="images/903_density_cos_2000x2000_10000000_255-0-0_255-255-255.png" alt="Strange attractor" width="300">
+            <img src="images/511_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <img src="images/542_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <img src="images/620_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <hr>
+            <p>A cool Evangelion gif from episode 26</p>
+            <img src="images/eva-ep-26.gif" alt="Evangelion Episode 26 frames" width="400">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Personal Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/darkmode.js"></script>
+    
+</body>
+</html>

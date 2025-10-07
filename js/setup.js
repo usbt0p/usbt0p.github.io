@@ -40,5 +40,16 @@ function setDynamicPageTitle() {
     document.title = `${pageTitle} - usbt0p`;
 }
 
-// Call the function to set the page title
+// Dynamically load the favicon
+function setFavicon() {
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.href = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' 
+                    viewBox='0 0 100 100'><text x='-10' y='100' font-size='100' 
+                    font-weight='bold'>𓏎</text></svg>`;
+    document.head.appendChild(favicon);
+}
+
+
+setFavicon();
 setDynamicPageTitle();

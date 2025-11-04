@@ -122,7 +122,7 @@ main {
 
 section {
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     
 }
 
@@ -163,6 +163,25 @@ hr {
     width: 100%; /* Adjust the width */
     margin-left: auto; /* Center the line */
     margin-right: auto;
+}
+
+/* pre and code blocks */
+pre {
+    background-color: var(--section-bg);
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    margin-bottom: 1rem; /* Space below the pre block */
+    font-size: 0.85em; /* Make code block text smaller */
+    max-width: 70%; /* Reduce code block width */
+}   
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+    font-size: 0.85em; /* Make inline code smaller */
+    line-height: 1.1;
 }
 
 /* Footer */

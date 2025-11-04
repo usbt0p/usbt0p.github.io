@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="styles.css">
@@ -13,18 +14,28 @@
         <section class="gallery">
             <h2>Gallery</h2>
             <p>A series of 2D strange attractors I recently created while playing around with 
-                some code.
+                some code. The quadratic map used to generate the attractors from random coefficients is defined as:
+                $$ 
+                \begin{aligned}
+                x_n &= a_0 + a_1 x_{n-1} + a_2 x_{n-1}^2 + a_3 x_{n-1} y_{n-1} + a_4 y_{n-1} + a_5 y_{n-1}^2,\\[6pt]
+                y_n &= b_0 + b_1 x_{n-1} + b_2 x_{n-1}^2 + b_3 x_{n-1} y_{n-1} + b_4 y_{n-1} + b_5 y_{n-1}^2.
+                \end{aligned}
+                $$
             </p>
             <p>
-                Colors are interpolated with exponential and cosine functions from an star to an end color
-                (top three images) or a histogram of the density of points (bottom three images, using numpy's magma colormap).
+                Colors are interpolated using a histogram of the density of points per pixel, through
+                the use of matplotlib colormaps. You can find the code in the
+                <a href="https://github.com/usbt0p/strange_attractors" target="_blank" rel="noopener" >strange attractors repository</a>.
             </p>
-            <img src="images/292_exp_2000x2000_15000000_248-214-74_7-41-181.png" alt="Strange attractor" width="300">
-            <img src="images/814_exp_2000x2000_15000000_0-0-255_0-255-0.png" alt="Strange attractor" width="300">
-            <img src="images/903_density_cos_2000x2000_10000000_255-0-0_255-255-255.png" alt="Strange attractor" width="300">
-            <img src="images/511_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
-            <img src="images/542_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <img src="images/5043_0_1.png" alt="Strange attractor" width="300">
+            <img src="images/4755_0_25.png" alt="Strange attractor" width="300">
             <img src="images/620_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <img src="images/5188_0_0.png" alt="Strange attractor" width="300">
+            <img src="images/5095_0_14.png" alt="Strange attractor" width="300">
+            <img src="images/4750_0_24.png" alt="Strange attractor" width="300">
+            <img src="images/511_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <img src="images/4894_0_24.png" alt="Strange attractor" width="300">
+            <img src="images/4909_0_15.png" alt="Strange attractor" width="300">
             <hr>
             <p>A cool Evangelion gif from episode 26</p>
             <img src="images/eva-ep-26.gif" alt="Evangelion Episode 26 frames" width="400">

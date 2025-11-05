@@ -135,6 +135,24 @@ section p {
     margin-bottom: 1rem;
 }
 
+/* Paragraph Alignments */
+p.centered
+{
+  text-align:center;
+}
+
+p.right
+{
+  text-align:right;
+}
+
+p.left /*this is default but added for clarity*/
+{
+  text-align:left;
+}
+
+
+
 /* Links */
 a {
     color: var(--link-color);

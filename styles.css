@@ -224,4 +224,29 @@ img {
         min-width: 30px; /* Prevent shrinking too much */
         min-height: 30px; /* Prevent shrinking too much */
     }
+
+    /* Code blocks on mobile */
+    pre {
+        max-width: 100%;
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+    
+    code {
+        max-width: 100%;
+    }
+
+    /* MathJax equations on mobile */
+    .MathJax {
+        max-width: 100% !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.5rem 0.2rem; /* Add vertical padding */
+    }
+    
+    mjx-container {
+        max-width: 100% !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.5rem 0.2rem; /* Add vertical padding */
+    }
 }

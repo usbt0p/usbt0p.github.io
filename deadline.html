@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSUK Deadline !!!!!</title>
-    
+
     <meta name="title" content="FSUK Deadline !!!!!">
     <meta name="description" content="how many days until July 13th ?">
 
@@ -16,7 +16,8 @@
     <meta property="og:url" content="https://usbt0p.github.io/deadline.html">
     <meta property="og:title" content="FSUK Deadline Countdown 🫵🏻">
     <meta property="og:description" content="Checking the clock for Auria... Click to see the days and weeks left.">
-    <meta property="og:image" content="https://media.tenor.com/c_xe3Yu68MMAAAAM/%D0%B7%D0%B0%D1%8F%D1%86-%D1%87%D0%B0%D1%81%D1%8B.gif">
+    <meta property="og:image"
+        content="https://media.tenor.com/c_xe3Yu68MMAAAAM/%D0%B7%D0%B0%D1%8F%D1%86-%D1%87%D0%B0%D1%81%D1%8B.gif">
 
     <script>
         window.onload = function () {
@@ -36,15 +37,15 @@
             const diffWeeks = Math.floor(diffDays / 7); // Round weeks down
 
             const emojis = ["🚨", "⚠️", "📢", "🔥", "💡", "🆘", "🧨", "‼️", "💥", "🫨", "👀", "👩‍💻", "🗣", "🫵🏻", "🧘🏼‍♂️", "☕️", "🏎", "🚗", "🔊", "🏁", "🗿", "💹", "🚟"];
-            const randomEmoji1 = emojis[Math.floor(Math.random() * emojis.length)]; 
+            const randomEmoji1 = emojis[Math.floor(Math.random() * emojis.length)];
             const randomEmoji2 = emojis[Math.floor(Math.random() * emojis.length)];
 
             // URL fragment example: FSUK  🚨 Días: <days> Semanas: <weeks>
             const text = `FSUK  ${randomEmoji1}${randomEmoji2} Días: ${diffDays} Semanas: ${diffWeeks}`;
             const targetUrl = `https://bigtext.net/#${encodeURIComponent(text)}`;
 
-            // Perform the redirect! Using replace to avoid adding the redirecting page to history.
-            window.location.replace(targetUrl);
+            // Perform the redirect!
+            window.location.href = targetUrl;
         };
     </script>
     <style>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadline Redirect</title>
+    <script>
+        window.onload = function () {
+            // Note: Month is 0-indexed in JS, so 6 is July.
+            const targetDate = new Date(2026, 6, 13);
+            const today = new Date();
+
+            // Strip the time to calculate full calendar days difference
+            targetDate.setHours(0, 0, 0, 0);
+            today.setHours(0, 0, 0, 0);
+
+            // milliseconds
+            const diffTime = targetDate - today;
+
+            // days and weeks (if target date has passed, use 0)
+            const diffDays = diffTime > 0 ? Math.round(diffTime / (1000 * 60 * 60 * 24)) : 0;
+            const diffWeeks = Math.floor(diffDays / 7); // Round weeks down
+
+            const emojis = ["🚨", "⚠️", "📢", "🔥", "💡", "🆘", "🧨", "‼️", "💥", "🫨", "👀", "👩‍💻", "🗣", "🫵🏻", "🧘🏼‍♂️", "☕️", "🏎", "🚗", "🔊", "🏁", "🗿", "💹", "🚟"];
+            const randomEmoji1 = emojis[Math.floor(Math.random() * emojis.length)]; 
+            const randomEmoji2 = emojis[Math.floor(Math.random() * emojis.length)];
+
+            // URL fragment example: FSUK  🚨 Días: <days> Semanas: <weeks>
+            const text = `FSUK  ${randomEmoji1}${randomEmoji2} Días: ${diffDays} Semanas: ${diffWeeks}`;
+            const targetUrl = `https://bigtext.net/#${encodeURIComponent(text)}`;
+
+            // Perform the redirect! Using replace to avoid adding the redirecting page to history.
+            window.location.replace(targetUrl);
+        };
+    </script>
+    <style>
+        body {
+            background-color: #111;
+            color: #eee;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .loader {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <h2>Redirecting to countdown...</h2>
+    </div>
+</body>
+
+</html>

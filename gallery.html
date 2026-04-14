@@ -12,33 +12,89 @@
 
     <main>
         <section class="gallery">
-            <h2>Gallery</h2>
+            <h1>Gallery</h1>
+
+            <hr>
+            
+            <h2>Strange Attractors</h2>
             <p>A series of 2D strange attractors I recently created while playing around with 
-                some code. The quadratic map used to generate the attractors from random coefficients is defined as:
+                some code based on the idea of <a href="https://paulbourke.net/fractals/lyapunov/">Paul Bourke's</a> work. 
+                The quadratic map used to generate the attractors from random coefficients is defined as:
                 $$ 
                 \begin{aligned}
                 x_n &= a_0 + a_1 x_{n-1} + a_2 x_{n-1}^2 + a_3 x_{n-1} y_{n-1} + a_4 y_{n-1} + a_5 y_{n-1}^2\\[6pt]
                 y_n &= b_0 + b_1 x_{n-1} + b_2 x_{n-1}^2 + b_3 x_{n-1} y_{n-1} + b_4 y_{n-1} + b_5 y_{n-1}^2
                 \end{aligned}
                 $$
+
+                I'd like to make a post in the blog explaining the math behind this sometime in the future... I 
+                learned about chaos theory while doing it, since the attractors are found by estimating
+                the lyapunov exponent of the system (a measure of how chaotic the system is). 
+            </p>
+            <p>I also came up with a coloring technique based on the density of points per pixel + 
+                matplotlib colormaps and procedurally generated
+                colormaps, which I later found out already existed, and learned about
+                optimizing sequential Python code combining Numba and NumPy.
             </p>
             <p>
-                Colors are interpolated using a histogram of the density of points per pixel, through
-                the use of matplotlib colormaps. You can find the code in the
+                You can find the code in the
                 <a href="https://github.com/usbt0p/strange_attractors" target="_blank" rel="noopener" >strange attractors repository</a>.
             </p>
             
             <p class="centered">
-            <img src="images/5043_0_1.png" alt="Strange attractor" width="300">
-            <img src="images/4755_0_25.png" alt="Strange attractor" width="300">
-            <img src="images/620_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
-            <img src="images/5188_0_0.png" alt="Strange attractor" width="300">
-            <img src="images/5095_0_14.png" alt="Strange attractor" width="300">
-            <img src="images/4750_0_24.png" alt="Strange attractor" width="300">
-            <img src="images/511_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
-            <img src="images/4894_0_24.png" alt="Strange attractor" width="300">
-            <img src="images/4909_0_15.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/5043_0_1.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/4755_0_25.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/620_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/5188_0_0.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/5095_0_14.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/4750_0_24.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/511_histogram_1500x1500_10000000.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/4894_0_24.png" alt="Strange attractor" width="300">
+            <img src="images/attractors/quadratic/4909_0_15.png" alt="Strange attractor" width="300">
             </p>
+            
+            <hr>
+
+            <h2>Strange attractors with absolute valued functions</h2>
+            <p>While doing this, I stumbled upon 
+                <a href="https://sprott.physics.wisc.edu/fractals/booktext/SABOOK.PDF">
+                    this book
+                </a>
+                which contains a lot of information about attractor generation + lyapuynov exponents.
+                The book shows how ifyou replace the quadratic functions with the correct
+                absolute valued functions, you get some pretty cool looking attractors like the following ones.
+                The absolute valued ones display sharper edges and interesting, less organic looking structures.
+                This is the formula if you're interested:
+                $$
+                \begin{aligned}
+                x_n &= a_0 + a_1 x_{n-1} + a_2 y_{n-1} + |a_3 x_{n-1}| + |a_4 y_{n-1}|\\[6pt]
+                y_n &= b_0 + b_1 x_{n-1} + b_2 y_{n-1} + |b_3 x_{n-1}| + |b_4 y_{n-1}|
+                \end{aligned}
+                $$
+            </p>
+
+            <p class="centered">
+                <img src="images/attractors/absolutevalue/118_0_8.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/280_0_9.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/127_0_5.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/164_0_2.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/188_0_1.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/190_0_4.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/122_0_1.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/44_0_3.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/336_0_20.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/42_0_8.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/494_0_1.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/54_0_0.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/69_0_0.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/59_0_11.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/63_0_15.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/955_0_20.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/88_0_18.png" alt="Strange attractor" width="300">
+                <img src="images/attractors/absolutevalue/758_0_17.png" alt="Strange attractor" width="300">
+            </p>
+
+            <hr>
 
             <p>A cool Evangelion gif from episode 26</p>
             <img src="images/eva-ep-26.gif" alt="Evangelion Episode 26 frames" width="400">

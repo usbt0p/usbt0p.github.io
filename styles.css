@@ -121,9 +121,8 @@ main {
 }
 
 section {
-    padding: 2rem;
-    margin-bottom: 1rem;
-    
+    padding: 0.3rem;
+    margin: 0.3rem 0;
 }
 
 section h2 {
@@ -176,8 +175,8 @@ ul li {
 /* Horizontal Rule */
 hr {
     border: none; /* Remove default border */
-    border-top: 1px solid #ccc; /* Add a custom line */
-    margin: 10px 0; /* Add spacing above and below */
+    border-top: 2px solid #ccc; /* Add a custom line */
+    margin: 15px 0; /* Add spacing above and below */
     width: 100%; /* Adjust the width */
     margin-left: auto; /* Center the line */
     margin-right: auto;
